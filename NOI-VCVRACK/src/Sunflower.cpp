@@ -109,7 +109,7 @@ struct Sunflower : Module {
 				diffusion = params[PARAM_DIFFUSION].getValue();
 				Mixer.clear();
 				//retrieve all connected input if the param is on
-				if (params[PARAM_ONLYCONNECTED].getValue()) {
+				if (roundf(params[PARAM_ONLYCONNECTED].getValue()) > 0) {
 					for (int i = 0; i < 12; i++) {
 						if (inputs[i].isConnected()) {
 							Mixer.push_back(strip(i));
@@ -155,8 +155,7 @@ struct Sunflower : Module {
 		//}
 		outputs[OUTPUT].setVoltage(output);
 		//latch light
-		lights[LIGHT_ONLYCONNECTED].setBrightness(params[PARAM_ONLYCONNECTED].getValue());
-
+		lights[LIGHT_ONLYCONNECTED].setBrightness(roundf(params[PARAM_ONLYCONNECTED].getValue()));
 	}
 };
 

@@ -74,14 +74,12 @@ struct Hellebore : Module {
 		configOutput(L_OUTPUT, "Left");
 		configOutput(R_OUTPUT, "Right");
 		configOutput(TEST_OUTPUT, "TEST");
-
-		
 	}
 
 
 	void process(const ProcessArgs& args) override {
 		// freeze
-		m_params.freeze = (params[FREEZE_PARAM].getValue() > 0);
+		m_params.freeze = (roundf(params[FREEZE_PARAM].getValue()) > 0);
 		if (inputs[FREEZE_CV_INPUT].isConnected()){
 		m_params.freeze = (inputs[FREEZE_CV_INPUT].getVoltage()>0);
 		}

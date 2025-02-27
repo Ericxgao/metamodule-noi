@@ -150,8 +150,8 @@ public:
 		outputs[MIX_OUTPUT].setVoltage(output);
 		outputs[DEBUG_OUTPUT].setVoltage(debug);
 		// lights[PLAY_LIGHT].setBrightness(playing);
-		lights[REC_LIGHT].setBrightness(params[REC_PARAM].getValue());
-		lights[LOCK_LIGHT].setBrightness(params[LOCK_PARAM].getValue());
+		lights[REC_LIGHT].setBrightness(roundf(params[REC_PARAM].getValue()));
+		lights[LOCK_LIGHT].setBrightness(roundf(params[LOCK_PARAM].getValue()));
 		// lights[LOOP_LIGHT].setBrightness(loop_param);
 		// lights[CLEAR_LIGHT].setBrightness(clear_param);
 

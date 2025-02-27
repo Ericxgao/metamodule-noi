@@ -99,7 +99,7 @@ public:
 		redux_input = inputs[SIGNAL_INPUT].getVoltage();
 		redux_mod = inputs[REDUX_CV_INPUT].getVoltage();
 		redux_mod *= params[REDUX_CV_PARAM].getValue();
-		if (params[INTFLOAT_PARAM].getValue()) {
+		if (roundf(params[INTFLOAT_PARAM].getValue()) > 0) {
 			redux_mod = noi::Outils::truncate(redux_mod);
 		}
 		redux_mod = noi::Outils::mapValue(redux_mod, -5, 5, -50, 50);
@@ -107,7 +107,7 @@ public:
 		repeats = rack::math::clamp(repeats, 0.f, 100.f);
 		if (counter >= repeats) { counter = 0; redux_output = redux_input; }
 		counter++;
-		lights[INTFLOAT_LIGHT].setBrightness(params[INTFLOAT_PARAM].getValue());
+		lights[INTFLOAT_LIGHT].setBrightness(roundf(params[INTFLOAT_PARAM].getValue()));
 
 
 		//Ring Modulation
