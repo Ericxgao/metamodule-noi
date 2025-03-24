@@ -1,3 +1,0 @@
-No dylib in root
-gitignore, build, dist, rack-SDK
-no printf
