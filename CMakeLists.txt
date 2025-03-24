@@ -34,6 +34,7 @@ target_compile_options(NOI PRIVATE
     -fno-use-cxa-atexit
     $<$<CXX_COMPILER_ID:GNU>:-fvisibility=hidden>
     $<$<CXX_COMPILER_ID:GNU>:-fvisibility-inlines-hidden>
+    $<$<COMPILE_LANGUAGE:CXX>:-include ${CMAKE_CURRENT_LIST_DIR}/src/mutex-stub.hh>
 )
 
 # Add linker flags for static linking
@@ -51,6 +52,8 @@ target_sources(NOI PRIVATE
     ${SRC_DIR}/Pruners.cpp
     ${SRC_DIR}/Sinensis.cpp
     ${SRC_DIR}/Sunflower.cpp
+    ${SRC_DIR}/Philodendron.cpp
+    ${SRC_DIR}/RingBuffer.cpp
     ${SRC_DIR}/Wilt.cpp
     ${SRC_DIR}/buffer.cpp
     ${SRC_DIR}/outils.cpp
