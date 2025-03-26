@@ -1,7 +1,32 @@
 {
-    "MetaModulePluginMaintainer": "Eric Gao",
-    "MetaModulePluginMaintainerEmail": "",
-    "MetaModulePluginMaintainerUrl": "",
-    "MetaModuleDescription": "",
-    "MetaModuleIncludedModules": []
+    "MetaModulePluginMaintainer": "oksami",
+    "MetaModulePluginMaintainerEmail": "itsoksami@gmail.com",
+    "MetaModulePluginMaintainerUrl": "https://github.com/Ericxgao/metamodule-noi",
+    "MetaModuleDescription": "NOI modules ported for MetaModule",
+    "MetaModuleIncludedModules": [
+        {
+            "slug": "Hellebore",
+            "name": "Hellebore"
+        },
+        {
+            "slug": "Wilt",
+            "name": "Wilt"
+        },
+        {
+            "slug": "Dicotyledon",
+            "name": "Dicotyledon"
+        },
+        {
+            "slug": "Sunflower",
+            "name": "Sunflower"
+        },
+        {
+            "slug": "Sinensis",
+            "name": "Sinensis"
+        },
+        {
+            "slug": "Pruners",
+            "name": "Pruners"
+        }
+    ]
 }
